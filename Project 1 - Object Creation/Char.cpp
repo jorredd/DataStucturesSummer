@@ -1,35 +1,48 @@
 #include "Char.h"
-
-
+#include<iostream>
 namespace projectOne {
-	Char::Char()
-	{
-	}
+	int Char::COUNT = 0;
+	//Char::Char()
+	//{
+	//}
 
-	Char::Char(char c)
-	{
-	}
+	//Char::Char(char c)
+	//{
+	//}
 
-	Char::Char(int c)
-	{
-	}
+	//Char::Char(int c)
+	//{
+	//}
 
-	Char::Char(const Char & c)
-	{
-	}
+	//Char::Char(const Char & c)
+	//{
+	//}
 
-	void Char::equals(const Char & c)
-	{
-	}
+	//void Char::equals(const Char & c)
+	//{
+	//}
 
-	void Char::equals(char c)
-	{
-	}
+	//void Char::equals(char c)
+	//{
+	//}
 
-	void Char::equals(int c)
+	//void Char::equals(int c)
+	//{
+	//}
+	
+	void Char::count(int code)
 	{
-	}
 
+		if (code == 1) {
+			Char::COUNT++;
+		}
+		else if(code == 0) {
+			std::cout << "Char Class number " << Char::COUNT-- << " Deconstructed" << std::endl;
+		}
+		else {
+			throw "Wrong";
+		}
+	}
 	char Char::toChar() const
 	{
 		return 0;
@@ -58,9 +71,5 @@ namespace projectOne {
 	string Char::operator+(const Char c)
 	{
 		return string();
-	}
-
-	Char::~Char()
-	{
 	}
 }

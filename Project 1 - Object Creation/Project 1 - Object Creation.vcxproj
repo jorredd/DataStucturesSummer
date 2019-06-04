@@ -149,7 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BigDecimal.h" />
+    <ClInclude Include="BigDecimalException.h" />
     <ClInclude Include="Char.h" />
+    <ClInclude Include="CharException.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,7 @@
 #pragma once
 #include<string>
 #include"Char.h"
+#include <iostream>
 using std::string;
 namespace projectOne {
 	class BigDecimal
@@ -20,6 +21,6 @@ namespace projectOne {
 		string toString();
 		Char at(int index);
 
-		~BigDecimal();
+		~BigDecimal() { std::cout << "BigDecimal Class Deconstructed" << std::endl; };
 	};
 }

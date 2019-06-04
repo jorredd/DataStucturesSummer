@@ -1,19 +1,27 @@
 #pragma once
 #include<string>
+#include<iostream>
 using std::string;
 namespace projectOne {
 	class Char
 	{
-	public:
+	private:
 //data
-		Char();
-		Char(char c);
-		Char(int c);
-		Char(const Char &c);
+	
+		void count(int code);
+		int Ichar;
+		char Cchar;
+	public:
+		static int COUNT;
+//Constructors
+		Char() { count(1); };
+		Char(char c) : Cchar(c) { count(1); };
+		Char(int c) : Ichar(c) { count(1); };
+		Char(const Char &c) : Cchar(c.toChar()) { count(1); };
 //mutators
-		void equals(const Char &c);
-		void equals(char c);
-		void equals(int c);
+		void equals(const Char &c) { this->Cchar = c.toChar(); };
+		void equals(char c) { this->Cchar = c; };
+		void equals(int c) { this->Ichar = c; };
 //accessors
 		char toChar() const;
 		int toInt() const;
@@ -22,6 +30,6 @@ namespace projectOne {
 		string operator +(char c);
 		string operator +(const Char c);
 
-		~Char();
+		~Char() { count(0); };
 	};
 }

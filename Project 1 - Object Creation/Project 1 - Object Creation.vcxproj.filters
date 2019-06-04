@@ -32,5 +32,11 @@
     <ClInclude Include="BigDecimal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CharException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BigDecimalException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
