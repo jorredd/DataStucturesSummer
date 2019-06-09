@@ -4,10 +4,15 @@ namespace projectOne {
 
 	BigDecimal::BigDecimal()
 	{
+		this->digits.reserve(100);
+		this->digits.push_back(Char(48));
+		this->digits.push_back(Char(46));
+		this->digits.push_back(Char(48));
 	}
 
 	BigDecimal::BigDecimal(string value)
 	{
+		int convert = stoi(value);
 	}
 
 	void BigDecimal::equals(char ch)

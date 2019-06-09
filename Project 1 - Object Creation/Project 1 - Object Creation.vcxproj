@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="BigDecimal.cpp" />
     <ClCompile Include="Char.cpp" />
+    <ClCompile Include="CharException.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

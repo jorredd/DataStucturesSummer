@@ -2,10 +2,15 @@
 #include<string>
 #include"Char.h"
 #include <iostream>
+#include<vector>
+using std::stoi;
+using std::vector;
 using std::string;
 namespace projectOne {
 	class BigDecimal
 	{
+	private:
+		vector<Char>digits;
 	public:
 		BigDecimal();
 		BigDecimal(string value);
