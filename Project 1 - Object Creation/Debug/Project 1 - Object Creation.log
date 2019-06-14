@@ -1,2 +1,11 @@
-﻿  Char.cpp
-  Project 1 - Object Creation.vcxproj -> C:\Users\jredd\source\repos\git\DataStructuresSummer\DataStructuresSummer\Debug\Project 1 - Object Creation.exe
+﻿  BigDecimal.cpp
+d:\projects\current\datastucturessummer\project 1 - object creation\bigdecimal.cpp(30): warning C4018: '<': signed/unsigned mismatch
+d:\projects\current\datastucturessummer\project 1 - object creation\bigdecimal.cpp(74): warning C4018: '<': signed/unsigned mismatch
+d:\projects\current\datastucturessummer\project 1 - object creation\bigdecimal.cpp(90): warning C4018: '<': signed/unsigned mismatch
+  BigDecimalException.cpp
+  Char.cpp
+  CharException.cpp
+  Parser.cpp
+  main.cpp
+  Generating Code...
+  Project 1 - Object Creation.vcxproj -> D:\Projects\current\DataStucturesSummer\Debug\Project 1 - Object Creation.exe

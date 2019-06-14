@@ -1,3 +1,11 @@
+// Jordan Redd
+// CSIS 123A-3488
+// 6/9/2019
+// Prof. Stevenson
+// Assignment 1	
+/* Description:
+	Looks through the Numbers.txt file and seperates the whole numbers and fractions into their own files.
+*/
 #pragma once
 #include<string>
 #include<sstream>
@@ -20,7 +28,7 @@ namespace projectOne {
 //Constructors
 		Char() { count(1); };
 		Char(char c) : Cchar(c) { count(1); };
-		Char(int c) : Cchar(static_cast<char>(c)) { count(1);}; //IM GOIN TO HAVE TO CHANGE ALL OF THIS SHIT.....
+		Char(int c) : Cchar(static_cast<char>(c)) { count(1);}; 
 		Char(const Char &c) : Cchar(c.toChar()) { count(1); };
 //mutators
 		void equals(char c) { this->Cchar = c; };

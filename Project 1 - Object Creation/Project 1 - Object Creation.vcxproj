@@ -144,15 +144,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BigDecimal.cpp" />
+    <ClCompile Include="BigDecimalException.cpp" />
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="CharException.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BigDecimal.h" />
     <ClInclude Include="BigDecimalException.h" />
     <ClInclude Include="Char.h" />
     <ClInclude Include="CharException.h" />
+    <ClInclude Include="Parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="numbers.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
