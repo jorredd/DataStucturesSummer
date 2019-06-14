@@ -32,9 +32,9 @@ int main()
 		Pair<int, string> Lexus_Car_2(2, "RCF");
 
 		LinkedList<Pair<int, string>> Lexus;
-		Lexus.addNode(Lexus_Car_0);
-		Lexus.addNode(Lexus_Car_1);
-		Lexus.addNode(Lexus_Car_2);
+		Lexus.push_back(Lexus_Car_0);
+		Lexus.push_back(Lexus_Car_1);
+		Lexus.push_back(Lexus_Car_2);
 
 		//Linked list test with using Overloaded Constructor
 		Pair<int, string> Toyota_Car_0(0, "Supra MKIV");
@@ -42,10 +42,10 @@ int main()
 		Pair<int, string> Toyota_Car_2(2, "GT86 TRD");
 
 		LinkedList<Pair<int, string>> Toyotas(Toyota_Car_0);
-		Toyotas.addNode(Toyota_Car_1);
-		Toyotas.addNode(Toyota_Car_2);
+		Toyotas.push_back(Toyota_Car_1);
+		Toyotas.push_back(Toyota_Car_2);
 
-		cout << "Lets grab some data "; Lexus.printList(); 
+		//cout << "Lets grab some data "; Lexus.printList(); 
 
 		try {
 			//Int test... The linked list will just handle primitives. The PairList will have to be able to handle searching specifically for Pairs
@@ -56,8 +56,9 @@ int main()
 			//String test
 			LinkedList<string> Testerson("HEAD");
 			Testerson.insert("HEAD", "Initially Inserted after head but will get pushed down");
-			Testerson.insert("Initially Inserted after head but will get pushed down", "Pushes the long complicated one down");
-			Testerson.insert("HEAD", "LAST");
+			Testerson.insert("Initially Inserted after head but will get pushed down", "LAST");
+			Testerson.insert("HEAD", "Pushes the long complicated one down");
+			cout << "Lets grab some data " << endl; Testerson.printList();
 		}
 		catch (exception insertException)
 		{
@@ -67,6 +68,19 @@ int main()
 	catch (exception ePair)
 	{
 		cout << "So that didn't work... How about we just ignore that and continue on?" << endl;
+	}
+
+	try {
+		Pair<int, string> even2(2, "4");
+		Pair<int, string> even4(4, "6");
+		Pair<int, string> even6(6, "8");
+
+		PairList<Pair<int, string>>PairListTest(even2);
+		PairListTest.push_back(even4);
+	}
+	catch (exception pairListException)
+	{
+
 	}
 
 	return int(0);
