@@ -1,3 +1,11 @@
+// Jordan Redd
+// CSIS 123A-3488
+// 6/16/2019
+// Prof. Stevenson
+// Assignment 2
+/* Description:
+	Is a container class that can hold any type of data. Can function well with primitive types but once complex types get added you will need to make a new specialized class derived from this.
+*/
 #pragma once
 #include<exception> 
 using std::exception;
@@ -9,35 +17,35 @@ using std::vector;
 using std::cout;
 using std::endl;
 
-
-template<class T1>
+//struct that will hold amd link all the values being passed to the LinkedList class
+template<class T>
 struct Node {
-	T1 data;
+	T data;
 	Node* next;
 };
 
 
-template<class T1>
+template<class T>
 class LinkedList
 {
 public:
 	LinkedList() {};
-	LinkedList(T1 data) { push_back(data); };
+	LinkedList(T data) { push_back(data); };
 	~LinkedList();
 
 protected:
-	Node<T1>* head = NULL;
-	Node<T1>* pointer;
+	Node<T>* head = NULL;
+	Node<T>* pointer;
 public:
 	// Adds node to the front of the list
-	void push(T1 data);
+	void push(T data);
 
 	// Adds a new node to the linked list
-	void push_back(T1 data);
+	void push_back(T data);
 
 	// Inserts a node at the given parameters
-	void insert(string search, T1 data);
-	void insert(int search, T1 data);
+	void insert(string search, T data);
+	void insert(int search, T data);
 
 	// Delets a node at the given parameters
 	void deleteNode(string search);
@@ -46,56 +54,56 @@ public:
 	// Prints the data of all the nodes in the list
 	void printList();
 
-
 	// Finds a specified Node based on search parameters	
-	T1 find(int search);
-	T1 find(string search);
+	T find(int search);
+	T find(string search);
 	// returns the back of the LinkedList
-	T1 pop();
+	T pop();
 	// Returns the first item put into the list
-	T1 enqeue();
+	T enqeue();
+
 };
 
-template<class T1>
-LinkedList<T1>::~LinkedList()
+template<class T>
+LinkedList<T>::~LinkedList()
 {
 }
 
 // Adds node to the front of the list
-template<class T1>
-void LinkedList<T1>::push(T1 data)
+template<class T>
+void LinkedList<T>::push(T data)
 {
 	if (this->head == NULL)
 	{
 		this->push_back(data);
 	}
 	else {
-		Node<T1>* p = this->head; // this is pointing at the head NODE
+		Node<T>* p = this->head; // this is pointing at the head NODE
 
 		//Creates the new node
-		Node<T1>* n = new Node<T1>();
+		Node<T>* n = new Node<T>();
 		n->data = data;
 		n->next = p;
 	}
 }
 
 // Adds a new node to the linked list
-template<class T1>
-void LinkedList<T1>::push_back(T1 data)
+template<class T>
+void LinkedList<T>::push_back(T data)
 {
 	if (this->head == NULL)
 	{
-		this->head = new Node<T1>();
+		this->head = new Node<T>();
 		this->head->data = data;
 		this->head->next = NULL;
 	}
 	else {
-		Node<T1>* p = this->head; // this is pointing at the head NODE
+		Node<T>* p = this->head; // this is pointing at the head NODE
 
 		while (p->next != NULL) p = p->next; //Transverse the list until you hit the end
 
 		//Creates the new node
-		Node<T1>* n = new Node<T1>();
+		Node<T>* n = new Node<T>();
 		n->data = data;
 		n->next = NULL;
 
@@ -105,14 +113,14 @@ void LinkedList<T1>::push_back(T1 data)
 }
 
 // Inserts a node {AFTER}  the given parameters
-template<class T1>
-void LinkedList<T1>::insert(string search, T1 data) //This will not work with complex types but will only work with primitive types.
+template<class T>
+void LinkedList<T>::insert(string search, T data) //This will not work with complex types but will only work with primitive types.
 {
-	Node<T1>* p = this->head; // this is pointing at the head NODE
+	Node<T>* p = this->head; // this is pointing at the head NODE
 	while (p->data != search) p = p->next;
 
 	//Creates the new node
-	Node<T1>* n = new Node<T1>();
+	Node<T>* n = new Node<T>();
 	n->data = data;
 	n->next = p->next;
 
@@ -122,14 +130,14 @@ void LinkedList<T1>::insert(string search, T1 data) //This will not work with co
 }
 
 // Inserts a node {AFTER}  the given parameters
-template<class T1>
-void LinkedList<T1>::insert(int search, T1 data)
+template<class T>
+void LinkedList<T>::insert(int search, T data)
 {
-	Node<T1>* p = this->head; // this is pointing at the head NODE
+	Node<T>* p = this->head; // this is pointing at the head NODE
 	while (p->data != search) p = p->next;
 
 	//Creates the new node
-	Node<T1>* n = new Node<T1>();
+	Node<T>* n = new Node<T>();
 	n->data = data;
 	n->next = p->next;
 
@@ -139,56 +147,56 @@ void LinkedList<T1>::insert(int search, T1 data)
 }
 
 // Delets a node at the given parameters
-template<class T1>
-void LinkedList<T1>::deleteNode(string search)
+template<class T>
+void LinkedList<T>::deleteNode(string search)
 {
-	Node<T1>* p = this->head;
+	Node<T>* p = this->head;
 	while (p->data != search) p = p->next;
-	Node<T1>* delPtr = p->next;
+	Node<T>* delPtr = p->next;
 
 	p->next = p->next->next;
 	delete delPtr;
 }
 // Delets a node at the given parameters
-template<class T1>
-void LinkedList<T1>::deleteNode(int search)
+template<class T>
+void LinkedList<T>::deleteNode(int search)
 {
-	Node<T1>* p = this->head;
+	Node<T>* p = this->head;
 	while (p->data != search) p = p->next;
-	Node<T1>* delPtr = p->next;
+	Node<T>* delPtr = p->next;
 
 	p->next = p->next->next;
 	delete delPtr;
 }
 
 // Finds a specified Node based on search parameters
-template<class T1>
-T1 LinkedList<T1>::find(int search)
+template<class T>
+T LinkedList<T>::find(int search)
 {
-	Node<T1>* p = this->head;
+	Node<T>* p = this->head;
 	while (p->data != search) p = p->next;
 	return *p;
 }
 
 // Finds a specified Node based on search parameters
-template<class T1>
-T1 LinkedList<T1>::find(string search)
+template<class T>
+T LinkedList<T>::find(string search)
 {
-	Node<T1>* p = this->head;
+	Node<T>* p = this->head;
 	while (p->data != search) p = p->next;
 	return *p;
 }
 
 // returns the back of the LinkedList
-template<class T1>
-T1 LinkedList<T1>::pop()
+template<class T>
+T LinkedList<T>::pop()
 {
 	if (this->head == NULL)
 	{
 		throw new exception("LinkedList is Empty");
 	}
 	else {
-		Node<T1>* p = this->head; // this is pointing at the head NODE
+		Node<T>* p = this->head; // this is pointing at the head NODE
 
 		while (p->next != NULL) p = p->next; //Transverse the list until you hit the end
 		return p;
@@ -196,8 +204,8 @@ T1 LinkedList<T1>::pop()
 }
 
 // Returns the first item put into the list
-template<class T1>
-T1 LinkedList<T1>::enqeue()
+template<class T>
+T LinkedList<T>::enqeue()
 {
 	if (this->head == NULL)
 	{
@@ -209,10 +217,10 @@ T1 LinkedList<T1>::enqeue()
 }
 
 // Prints the data of all the nodes in the list
-template<class T1>
-void LinkedList<T1>::printList()
+template<class T>
+void LinkedList<T>::printList()
 {
-	Node<T1>* p = this->head;
+	Node<T>* p = this->head;
 	while (p != NULL)
 	{
 		cout << p->data << endl;
