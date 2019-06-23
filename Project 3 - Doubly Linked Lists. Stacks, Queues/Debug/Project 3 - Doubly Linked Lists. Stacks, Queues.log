@@ -1,4 +1,3 @@
-﻿  main.cpp
-  Stack.cpp
-  Generating Code...
-  Project 3 - Doubly Linked Lists. Stacks, Queues.vcxproj -> C:\Users\jredd\source\repos\git\DataStructuresSummer\DataStructuresSummer\Debug\Project 3 - Doubly Linked Lists. Stacks, Queues.exe
+﻿  RPN_Calculator.cpp
+d:\projects\current\datastucturessummer\project 3 - doubly linked lists. stacks, queues\rpn_calculator.cpp(23): warning C4018: '<': signed/unsigned mismatch
+  Project 3 - Doubly Linked Lists. Stacks, Queues.vcxproj -> D:\Projects\current\DataStucturesSummer\Debug\Project 3 - Doubly Linked Lists. Stacks, Queues.exe

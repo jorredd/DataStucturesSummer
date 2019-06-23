@@ -1,7 +1,10 @@
 #include "LinkedList.h"
 #pragma once
+
+
+#pragma region header/prototyping
 template<class T>
-class Stack : public LinkedList<T>
+class Stack : private DblyLinkedList<T>
 {
 
 private:
@@ -16,27 +19,55 @@ public:
 #pragma endregion
 
 #pragma region getters
+	T peek();
 
 #pragma endregion
 
-#pragma region setters
+#pragma region Mutators
 	//Stack FILO data structure
-	void push();
+	void push(T data);
+	T pop();
 #pragma endregion
-
-	
 
 };
+#pragma endregion
 
-//Stack FILO data structure
+
+
+#pragma region Constructors Definition
 template<class T>
-void Stack<T>::push()
-{
-	// TODO: Add your implementation code here.
-	return T();
-}
-template<class T>
-inline Stack<T>::~Stack()
+ Stack<T>::Stack()
 {
 }
+template<class T>
+ Stack<T>::~Stack()
+{
+}
+
+#pragma endregion
+
+#pragma region Mutators Definitions
+
+ template<class T>
+ void Stack<T>::push(T data)
+ {
+	 DblyLinkedList<T>::push(data);
+ }
+
+ template<class T>
+ T Stack<T>::pop()
+ {
+	 return DblyLinkedList<T>::pop();
+ }
+#pragma endregion
+
+#pragma region Getters Definitions
+ template<class T>
+ T Stack<T>::peek()
+ {
+	 return DblyLinkedList<T>::peek();
+ }
+#pragma endregion
+
+
 
