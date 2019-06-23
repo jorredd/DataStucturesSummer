@@ -1,3 +1,7 @@
-﻿  RPN_Calculator.cpp
-d:\projects\current\datastucturessummer\project 3 - doubly linked lists. stacks, queues\rpn_calculator.cpp(23): warning C4018: '<': signed/unsigned mismatch
+﻿  InfixNotation_Calculator.cpp
+d:\projects\current\datastucturessummer\project 3 - doubly linked lists. stacks, queues\infixnotation_calculator.cpp(19): warning C4018: '<': signed/unsigned mismatch
+  RPN_Calculator.cpp
+d:\projects\current\datastucturessummer\project 3 - doubly linked lists. stacks, queues\rpn_calculator.cpp(24): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
   Project 3 - Doubly Linked Lists. Stacks, Queues.vcxproj -> D:\Projects\current\DataStucturesSummer\Debug\Project 3 - Doubly Linked Lists. Stacks, Queues.exe

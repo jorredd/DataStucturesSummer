@@ -286,7 +286,7 @@ T DblyLinkedList<T>::peek()
 		throw new exception("LinkedList is Empty");
 	}
 	else {
-		return this->head;
+		return this->head->data;
 	}
 }
 

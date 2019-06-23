@@ -27,12 +27,12 @@ int main()
 		cout <<  e.what() << endl;
 	}
 	try {
-		RPN_Calculator calc("TH1S 1S A T3ST");
+		RPN_Calculator calc("12.5   2    +  3.4   52 *    56  ");
 		//ddwrggr
 	}
 	catch (exception e)
 	{
-
+		cout << e.what() << endl;
 	}
 	
 
