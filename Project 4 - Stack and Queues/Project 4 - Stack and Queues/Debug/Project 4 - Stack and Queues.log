@@ -1,0 +1,4 @@
+﻿  Palindrone.cpp
+c:\users\jredd\source\repos\git\datastructuressummer\datastructuressummer\project 4 - stack and queues\project 4 - stack and queues\palindrone.cpp(29): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+c:\users\jredd\source\repos\git\datastructuressummer\datastructuressummer\project 4 - stack and queues\project 4 - stack and queues\palindrone.cpp(29): warning C4244: 'initializing': conversion from 'std::streamoff' to 'const int', possible loss of data
+  Project 4 - Stack and Queues.vcxproj -> C:\Users\jredd\source\repos\git\DataStructuresSummer\DataStructuresSummer\Project 4 - Stack and Queues\Debug\Project 4 - Stack and Queues.exe
