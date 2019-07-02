@@ -1,10 +1,12 @@
 // Jordan Redd
 // CSIS 123A-3488
-// 6/16/2019
+// 6/30/2019
 // Prof. Stevenson
-// Assignment 3
+// Assignment 4
 /* Description:
-	Is a container class that can hold any type of data. Can function well with primitive types but once complex types get added you will need to make a new specialized class derived from this.
+	Uses the Queue to create a Palindrome checker. This file has one method that handles evrything for this class
+	The Parser() metho handles the Reading and Writing and Parses through the read text saving each Char to Stack
+	and a Queue to be tested against.
 */
 #pragma once
 #pragma region INCLUDES/USINGS
@@ -163,6 +165,7 @@ T DblyLinkedList<T>::pop()
 		Node<T>* tmp = this->head;
 		Node<T> ret = *tmp;
 		Node<T>* delPtr = this->head;
+
 
 		p->data = tmp->next->data;
 		p->next = tmp->next->next;

@@ -1,3 +1,13 @@
+// Jordan Redd
+// CSIS 123A-3488
+// 6/30/2019
+// Prof. Stevenson
+// Assignment 4
+/* Description:
+	Uses the Queue to create a Palindrome checker. This file has one method that handles evrything for this class
+	The Parser() metho handles the Reading and Writing and Parses through the read text saving each Char to Stack
+	and a Queue to be tested against.
+*/
 #pragma once
 #include "LinkedList.h"
 
@@ -12,7 +22,6 @@ public:
 #pragma region Getters
 	T dequeue();
 	T peek();
-	void expose();
 #pragma endregion
 
 #pragma region Mutators
@@ -58,13 +67,6 @@ T Queue<T>::peek()
 {
 	return DblyLinkedList<T>::peek();
 }
-
-template<class T>
-void Queue<T>::expose()
-{
-	DblyLinkedList<T>::printList();
-}
-
 #pragma endregion
 
 
